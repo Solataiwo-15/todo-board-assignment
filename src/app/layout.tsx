@@ -1,9 +1,7 @@
-import { Providers } from "./providers";
+"use client";
 
-export const metadata = {
-  title: "Todo App",
-  description: "Frontend Developer Task",
-};
+import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "../app/theme";
 
 export default function RootLayout({
   children,
@@ -13,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <ChakraProvider theme={theme}>{children}</ChakraProvider>
       </body>
     </html>
   );
