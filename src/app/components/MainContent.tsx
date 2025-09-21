@@ -160,13 +160,7 @@ export default function MainContent() {
         <TodoToolbar viewMode={viewMode} setViewMode={setViewMode} />
 
         {viewMode === "table" ? (
-          <Box
-            bg="white"
-            p={4}
-            borderRadius="xl"
-            border="1px solid"
-            borderColor="gray.200"
-          >
+          <Box bg="brand.background" p={4} borderRadius="xl">
             <Tabs
               variant="unstyled"
               index={activeTabIndex ?? -1}
@@ -184,8 +178,6 @@ export default function MainContent() {
                       pl={2.5}
                       bg={isActive ? tab.activeBg : "white"}
                       color={isActive ? tab.activeColor : "gray.800"}
-                      boxShadow={!isActive ? "sm" : "none"}
-                      border={!isActive ? "1px solid #E2E8F0" : "none"}
                     >
                       <Flex
                         justify="space-between"
