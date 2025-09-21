@@ -24,7 +24,6 @@ import { mockTodos } from "../data/mockTodos";
 import { Todo, Status } from "../types";
 import TodoHeader from "./TodoHeader";
 import TodoToolbar from "./TodoToolbar";
-import { TaskSquare, Clock, TickCircle, RecordCircle } from "iconsax-react";
 import Pagination from "./todos/Pagination";
 import CardView from "./todos/CardView";
 import AddTaskModal from "./todos/AddTaskModal";
@@ -114,17 +113,6 @@ export default function MainContent() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setTaskToEdit(null);
-  };
-
-  const handleStatusToggle = (taskId: string, currentStatus: Status) => {
-    let nextStatus: Status = "In Progress";
-    if (currentStatus === "Todo") nextStatus = "In Progress";
-    if (currentStatus === "In Progress") nextStatus = "Complete";
-    if (currentStatus === "Complete") nextStatus = "Todo"; // Cycle back to 'Todo'
-
-    setTodos(
-      todos.map((t) => (t.id === taskId ? { ...t, status: nextStatus } : t))
-    );
   };
 
   const handleTaskSave = (taskData: Omit<Todo, "id">) => {
