@@ -24,6 +24,7 @@ import { mockTodos } from "../data/mockTodos";
 import { Todo, Status } from "../types";
 import TodoHeader from "./TodoHeader";
 import TodoToolbar from "./TodoToolbar";
+import { TaskSquare, Clock, TickCircle } from "iconsax-react";
 import Pagination from "./todos/Pagination";
 import CardView from "./todos/CardView";
 import AddTaskModal from "./todos/AddTaskModal";
