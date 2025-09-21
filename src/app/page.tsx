@@ -5,13 +5,14 @@ import MainContent from "../app/components/MainContent";
 
 export default function Home() {
   return (
-    <Flex h="100vh" bg="gray.50">
+    <Flex h="100vh" bg="brand.background">
       <Sidebar />
-
-      <Box flex="1">
+      <Flex direction="column" flex="1">
         <Header />
-        <MainContent />
-      </Box>
+        <Box flex="1" overflowY="auto" bg="white" m={12}>
+          <MainContent />
+        </Box>
+      </Flex>
     </Flex>
   );
 }

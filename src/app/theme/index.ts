@@ -2,12 +2,9 @@ import { extendTheme } from '@chakra-ui/react'
 
 const colors = {
   brand: {
-    primary: '#4A5568',      
-    secondary: '#2D3748',   
-    accent: '#38A169',     
+    primary: '#FFFFFF',      
+    secondary: '#2D3748',       
     background: '#F7F7F7',
-    iconsColor: '#1A1C1E',
-    searcBoxColor: '#6C7278',
     PrimaryTextColor: '#464B50',
     SecondaryTextColor: '#1A1C1E',
     Green: '#75C5C1',

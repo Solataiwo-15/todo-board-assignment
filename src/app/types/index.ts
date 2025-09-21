@@ -1,19 +1,20 @@
 // src/types/index.ts
 
 export type Priority = 'Urgent' | 'Important' | 'Medium';
-export type Status = 'Todo' | 'In Progress' | 'Complete'; 
+export type Status = 'Todo' | 'In Progress' | 'Complete';
 
 export interface Assignee {
   id: string;
-  avatarUrl: string;
   name: string;
+  avatarUrl: string;
 }
 
 export interface Todo {
   id: string;
   name: string;
   date: string;
-  assignees: Assignee[];
+  assignees: Assignee[]; 
   priority: Priority;
-  status: Status; 
+  status: Status;
+  description: string;
 }
